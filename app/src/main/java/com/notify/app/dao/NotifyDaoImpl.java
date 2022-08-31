@@ -43,12 +43,8 @@ public class NotifyDaoImpl implements NotifyDao {
 		query.setParameter("teamId", teamId);
 		
 		List<Developer> developers = query.getResultList();
-		//Developer selectedDeveloper = developers.stream().filter(p-> !p.getIsBusy().equals("1")).findFirst().get();
-		//selectedDeveloper.setIsBusy(1);
-		
-		//developerRepository.save(selectedDeveloper);
 
-		return null;
+		return developers.get(0);;
 	}
 
 	@Override
